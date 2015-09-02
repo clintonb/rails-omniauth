@@ -1,2 +1,13 @@
 <h3>User</h3>
 <p>Name: <%= @user.name if @user.name %></p>
+
+<p>
+  <strong>Active Enrollments</strong>
+<ul>
+  <% @user.enrollments.each do |enrollment| %>
+      <% if enrollment['is_active']%>
+          <li><%= enrollment['course_details']['course_id'] %> (<%= enrollment['mode'] %>)</li>
+      <% end %>
+  <% end %>
+</ul>
+</p>

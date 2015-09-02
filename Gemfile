@@ -16,6 +16,8 @@ gem 'high_voltage'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-openid-connect', :github => 'jjbohn/omniauth-openid-connect'
+gem 'typhoeus'
+
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
